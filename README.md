@@ -1,31 +1,28 @@
 # car-purchase-amount-prediction-ann
-car-purchase-amount-prediction-ann/
-│── README.md
+car-purchase-amount-prediction/
 │── data/
 │     └── car_purchasing.csv
 │── notebooks/
 │     └── Car_Purchase_Prediction.ipynb
 │── src/
 │     ├── preprocess.py
-│     ├── linear_regression_model.py
-│     ├── ann_model.py
+│     └── linear_regression_model.py
 │── results/
-│     ├── EDA_plots.png
-│     ├── model_comparison.csv
+│     ├── EDA_plots.png 
+│     └── model_metrics.txt    
 │── requirements.txt
+│── README.md
+
 
 ##Project Overview
 
-This project aims to predict the car purchase amount a customer is likely to spend using demographic and financial attributes.
-The pipeline includes:
-
-- Data cleaning
-- Outlier removal (IQR method)
+This is a pure Linear Regression project, focusing on:
+- Data preprocessing
 - Exploratory Data Analysis (EDA)
-- Feature engineering
-- Building regression models
-- Building an Artificial Neural Network (ANN) using TensorFlow
-- Comparing model performances
+- Feature selection
+- Building a Linear Regression model
+- Evaluating performance (MAPE, R²)
+This project demonstrates strong fundamentals in statistics, ML workflow, and predictive modelling.
 
 ##Dataset Description
 
@@ -51,47 +48,25 @@ To focus on numerical ML modeling, irrelevant character-based columns were remov
 - Pandas
 - Matplotlib
 - Statsmodels
-- Scikit-learn
-- TensorFlow / Keras
 
-##Models Implemented
 
-1️⃣ Linear Regression (OLS)
+##Model Implemented
+Linear Regression
 
-Built using Statsmodels
-Analyzed coefficients, p-values, and R²
-Checked multicollinearity with VIF
-Baseline model for comparison
-
-2️⃣ Ridge Regression
-
-Applied L2 regularization
-Handled potential overfitting
-Improved model stability
-
-3️⃣ Artificial Neural Network (ANN)
-
-A 2-layer deep learning model built using TensorFlow/Keras:
-Layer 1: Dense(6 neurons, relu)
-Layer 2: Dense(6 neurons, relu)
-Output: Dense(1 neuron)
-Loss: MSE
-Optimizer: Adam
-Epochs: 100
-Batch Size: 32
+- The dataset has numeric features
+- Relationship between features & target is nearly linear
+- Very easy to interpret
+- Works well for baseline regression problems
 
  ##Model Performance
 
-Model	Metric	Score
-Linear Regression	MAPE	~X%
-Ridge Regression	MAPE	~X%
-ANN (TensorFlow)	MAPE	0.87%
+Model	Metric	Score-
+MAPE:	~13%
+R² Score: ~0.617
 
-🔹 ANN achieved the best performance, capturing non-linear patterns more effectively than OLS or Ridge.
+##Results Summary
 
-## Key Insights
-
-- Net worth and age were strong predictors of purchase amount
+- Linear Regression performed well on the dataset
+- Model captured the relationship between income/net worth and spending
 - Outlier removal significantly improved model accuracy
-- ANN captured deeper relationships that linear models couldn’t
-- Minimal overfitting due to effective scaling and architecture
+- The model is simple, interpretable, and effective
