@@ -3,13 +3,7 @@ car-purchase-amount-prediction/
 │── data/
 │     └── car_purchasing.csv
 │── notebooks/
-│     └── Car_Purchase_Prediction.ipynb
-│── src/
-│     ├── preprocess.py
-│     └── linear_regression_model.py
-│── results/
-│     └── model_metrics.txt    
-│── requirements.txt
+│     └── Car_Purchase_Prediction.ipynb  
 │── README.md
 
 
