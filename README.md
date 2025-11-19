@@ -8,7 +8,6 @@ car-purchase-amount-prediction/
 │     ├── preprocess.py
 │     └── linear_regression_model.py
 │── results/
-│     ├── EDA_plots.png 
 │     └── model_metrics.txt    
 │── requirements.txt
 │── README.md
